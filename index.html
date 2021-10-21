@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>My fourth web site</title>
+</head>
+<body>
+<nav id="navbar">
+  <div class="header-first">
+    <header>Python Documentation</header>
+  </div>
+  <ul>
+    <li><a class="nav-link" href="#introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#what_you_should_already_know">What you should already know</a></li>
+    <li><a class="nav-link" href="#hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#variables">Variables</a></li>
+    <li><a class="nav-link" href="#declaring_variables">Declaring variables</a></li>
+    <li><a class="nav-link" href="#global_variables">Global variables</a></li>
+    <li><a class="nav-link" href="#constants">Constants</a></li>
+    <li><a class="nav-link" href="#data_types">Data types</a></li>
+    <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+    <li><a class="nav-link" href="#while_statement">While statement</a></li>
+    <li><a class="nav-link" href="#function_declarations">Function declarations</a></li>
+    <li><a class="nav-link" href="#reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="introduction">
+    <header>Introduction</header>
+    <article>
+      <p>Whether you are an experienced programmer or not, this website is intended for anyone who wants to learn the Python programming language. The idea of ​​creating the Spanish version is that this site is available to anyone interested without the language being a barrier. To achieve this, the first step has been to translate all the tutorials that exist in the English version into Spanish. </p>
+      <p>Any help is welcome! You can join the Facebook group for questions, discussions, and updates. Just click on the chapter you want to start from and then follow the instructions. You can also chat with other Python students. Good luck!</p>
+      <ul>
+        <li>Python is a general-purpose, versatile and popular programming language. It’s great as a first language because it is concise and easy to read, and it is also a good language to have in any programmer’s stack as it can be used for everything from web development to software development and scientific applications.</li>
+        <li>This course is a great introduction to both fundamental programming concepts and the Python programming language. By the end, you’ll be comfortable programming in Python and taking your skills off the Codecademy platform and onto your own computer.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" class="what_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+      <ul>
+        <li>Strings and Console Output</li>
+        <li>Conditionals and Control Flow</li>
+        <li>Lists & Dictionaries</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="hello_world">
+  <header>Hello world</header>
+  <article>
+    Welcome to your first tutorial! Click on the "Run" button at the bottom to run the code, or click on "Show Expected Output" to see the expected result after some modification. The goal of this exercise is to make the code print the following text in the output window:
+    <code>
+      print "Hello, World!"
+    </code>
+    Once you have modified the code to print the correct text, run it and see if it does the right thing.
+  </article>
+  </section>
+  <section class="main-section" id="variables">
+    <header>Variables</header>
+    <p>
+      Python is completely object-oriented, and it is not "statically written". You don't need to declare variables or the type before using them. Every variable in Python is an object.
+    </p>
+    <p>
+      Python supports two types of numbers - integers or integrals (integer) and floating point numbers (float). (It also supports complex numbers, which will not be explained in this tutorial).
+    </p>
+    <p>
+      Las cadenas están definidas con comillas sencillas o compuestas.
+    </p>
+  </section>
+  <section class="main-section" id="declaring_variables">
+    <header>Declaring variables</header>
+    <article>
+      This tutorial will go through some basic types of variables.
+      <p>To define an integral, use the following syntax: <code>myint = 7</code>It also supports complex numbers, which will not be explained in this tutorial.</p>
+      <p>Las cadenas están definidas con comillas sencillas o compuestas. <code>micadena = 'Hola' micadena = "Hola"</code>The difference between the two is that using double quotes makes it easier to include the apostofres (otherwise it will end the string if double quotes are used)</p>
+    </article>
+  </section>
+  <section class="main-section" id="global_variables">
+    <header>Global variables</header>
+    <article>
+    <p>Global variables in Python are those defined in the main body of the program outside of any function. They are accessible from anywhere in the program, even from within functions. Global variables from other imported programs or modules can also be accessed.</p>
+    <p>This is why we say that global variables are those of global scope. I show you an example where you can see how access to global variables is allowed from within a function.</p>
+    </article>
+  </section>
+  <section class="main-section" id="constants">
+    <header>Constants</header>
+    <article>
+      <p>A constant is a type of variable which cannot be changed. That is very helpful to think of constants as containers that contain information which cannot be changed later.</p>
+      <p>Here are some examples of using constants:</p>
+      <p>Create a file called constants.py with the following content:</p>
+      <code>PORT_DB_SERVER = 3307
+        USER_DB_SERVER = "root"
+        PASSWORD_DB_SERVER = "123456"
+        DB_NAME = "nomina"</code>
+      <p>Create a file called main.py with the following content:</p>
+      <code>print ("scp -v -P {0} {1}@{2}:/{3}/{4}/{4}.sql /srv/backup".format(
+        str(constantes.PORT_DB_SERVER), constantes.USER_DB_SERVER, 
+        constantes.IP_DB_SERVER, constantes.USER_DB_SERVER,
+        constantes.DB_NAME))</code>
+        <p>Then run the program as follows:</p>
+        <code>python main.py</code>
+        <p>When you run the program, the output will be:</p>
+        <code>scp -v -P 3307 root@127.0.0.1:/root/webapp/db.sql /srv/backup</code>
+    </article>
+  </section>
+  <section class="main-section" id="data_types">
+    <header>Data types</header>
+    <article>
+      <p>In Python you have several standard composite data types available by default in the interpreter, such as numeric types, sequences, mappings, and sets used to group other values. Here is the agenda for this lesson:</p>
+      <ul>
+        <li><p>Standard type hierarchy</p>
+          <ul>
+            <li>Classification</li>
+            <li>Objects Type</li>
+          </ul>
+        </li>
+        <li>Variables and constants</li>
+      </ul>
+      <p>In the case of data structures, variables and constants are used which use operators to treat standard data types.</p>
+    </article>
+  </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+      <p>Let’s get some practice with if statements. Remember, the syntax looks like this:</p>
+      <code>if some_function():
+        # block line one
+        # block line two
+        # et cetera</code>
+        <p>Looking at the example above, in the event that some_function() returns True, then the indented block of code after it will be executed. In the event that it returns False, then the indented block will be skipped.</p>
+        <p>Also, make sure you notice the colons at the end of the if statement. We’ve added them for you, but they’re important.</p>
+        <p>The else statement complements the if statement. An if/else pair says: “If this expression is true, run this indented code block; otherwise, run this code after the else statement.”</p>
+        <code>if 8 > 9:
+          print "I don't get printed!"
+        else:
+          print "I get printed!"</code>
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+  <header>While statement</header>
+  <article>
+    <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+    <code>i = 1
+      while i < 6:
+        print(i)
+        i += 1</code>
+    <p>The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.</p>
+    <p>With the break statement we can stop the loop even if the while condition is true:</p>
+    <code>i = 1
+      while i < 6:
+        print(i)
+        if i == 3:
+          break
+        i += 1</code>
+    <p>With the continue statement we can stop the current iteration, and continue with the next:</p>
+    <code>i = 0
+      while i < 6:
+        i += 1
+        if i == 3:
+          continue
+        print(i)</code>
+    <p>With the else statement we can run a block of code once when the condition no longer is true:</p>
+    <code>i = 1
+      while i < 6:
+        print(i)
+        i += 1
+      else:
+        print("i is no longer less than 6")</code>
+  </article>
+  </section>
+  <section class="main-section" id="function_declarations">
+    <header>Function declarations</header>
+    <article>
+      <p>Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time. Also functions are a key way to define interfaces so programmers can share their code. A block is a area of code of written in the format of:</p>
+      <code>block_head:
+        1st block line
+        2nd block line
+        ...</code>
+      <p>Where a block line is more Python code (even another block), and the block head is of the following format: block_keyword block_name(argument1,argument2, ...) Block keywords you already know are "if", "for", and "while". Functions in python are defined using the block keyword "def", followed with the function's name as the block's name. For example:</p>
+      <code>def my_function():
+        print("Hello From My Function!")</code>
+      <p>Functions may also receive arguments (variables passed from the caller to the function). For example:</p>
+      <code>def my_function_with_args(username, greeting):
+        print("Hello, %s , From My Function!, I wish you %s"%(username, greeting))</code>
+    </article>
+  </section>
+  <section class="main-section" id="reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>Information obtained from<a href="www.learnpython.org" target="_blank"> learnpython</a></li>
+        <li>Information obtained from<a href="https://www.codecademy.com/" target="_blank"> codecademy</a></li>
+        <li>Information obtained from<a href="https://www.codigopiton.com/" target="_blank"> codigopiton</a></li>
+        <li>Information obtained from<a href="www.w3schools.com" target="_blank"> w3schools</a></li>
+      </ul>
+    </article>
+  </section>
+</main>
+</body>
+</html>
